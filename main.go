@@ -158,4 +158,6 @@ func main() {
 
 	str := practice.LongestPalindrome("bbbaaabbbabcd")
 	fmt.Println("Longest Palimdrome Substring : ", str)
+
+	practice.Pattern1()
 }

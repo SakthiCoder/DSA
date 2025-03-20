@@ -20,7 +20,7 @@ func (s *Stack) Pop() (interface{}, bool) {
 	return item, true
 }
 
-func (s *Stack) IsEmpty() interface{} {
+func (s *Stack) IsEmpty() bool {
 	return len(s.items) == 0
 }
 
