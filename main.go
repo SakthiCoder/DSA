@@ -7,7 +7,8 @@ import (
 	"dsa/practice"
 	"dsa/queue"
 	"dsa/recursion"
-	"dsa/slidingwindow"
+	"dsa/slidingwindow/dynamicslidingwindow"
+	"dsa/slidingwindow/fixedslidingwindow"
 	"dsa/tree"
 	"fmt"
 )
@@ -79,13 +80,13 @@ func main() {
 
 	// Sliding Window
 	arr = []int{10, 200, 300, 400, 500}
-	fmt.Println("Sliding Window: ", slidingwindow.SumofSubArray(arr, 1, "max"))
+	fmt.Println("Sliding Window: ", fixedslidingwindow.SumofSubArray(arr, 1, "max"))
 
 	arr = []int{2, 3, 1, 2, 4, 3}
 	target := 7
 
 	// Get the result
-	result := slidingwindow.MinSubArrayLen(target, arr)
+	result := dynamicslidingwindow.MinSubArrayLen(target, arr)
 
 	fmt.Println("Dynamic Sliding Window: ", result)
 
@@ -93,7 +94,7 @@ func main() {
 	k := 2
 
 	// Get the result
-	result = slidingwindow.LongestSubarrayWithKDistinct(arr, k)
+	result = dynamicslidingwindow.LongestSubarrayWithKDistinct(arr, k)
 
 	fmt.Println("Dynamic Sliding Window: ", result)
 	// Example input
@@ -160,4 +161,7 @@ func main() {
 	fmt.Println("Longest Palimdrome Substring : ", str)
 
 	practice.Pattern1()
+
+	len := fixedslidingwindow.LongestSubStringWithoutRepeatingChar("abcabade")
+	fmt.Println("LongestSubStringWithoutRepeatingChar: ", len)
 }

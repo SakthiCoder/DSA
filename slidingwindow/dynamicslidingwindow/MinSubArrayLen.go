@@ -1,4 +1,4 @@
-package slidingwindow
+package dynamicslidingwindow
 
 import "fmt"
 

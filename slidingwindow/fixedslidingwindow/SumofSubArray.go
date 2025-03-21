@@ -16,7 +16,7 @@ Solve
 
 Maximum MEX of all subarray of size K */
 
-package slidingwindow
+package fixedslidingwindow
 
 import "math"
 
@@ -64,7 +64,6 @@ func SumofSubArray(arr []int, k int, str string) int {
 			} else if currentSum < maxSum && str == "min" {
 				maxSum = currentSum
 			}
-
 			currentSum -= arr[i-(k-1)]
 		}
 		i++
