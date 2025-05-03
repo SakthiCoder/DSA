@@ -187,6 +187,7 @@ func main() {
 	// cuncurrency.RunInParallel()
 	// cuncurrency.RunSequentially()
 
+	//In how many ways can you choose 3 friends from a group of 10?
 	res := practice.NCRCombinators(10, 3)
 
 	fmt.Println("res: ", res)
