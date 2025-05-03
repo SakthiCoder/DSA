@@ -7,13 +7,14 @@ func Pattern1() {
 
 	k := 3
 	n := 7
-	for row := 0; row <= n; row++ {
-		for col := 0; col <= n; col++ {
-			if (row*col-1)%2 == 1 {
-				fmt.Print("*")
-			} else {
-				fmt.Print(" ")
-			}
+	for row := 1; row <= n; row++ {
+
+		for k := 1; k < n; k++ {
+			
+		}
+
+		for col := 1; col <= n; col++ {
+			// fmt.Print("* ")
 		}
 		k--
 		fmt.Println()

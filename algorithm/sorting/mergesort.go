@@ -2,7 +2,8 @@ package sorting
 
 func MergeSort(inputArr []int) {
 
-	if len(inputArr) < 2 {
+	// Base Condition
+	if len(inputArr) <= 1 {
 		return
 	}
 

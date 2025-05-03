@@ -11,6 +11,8 @@ import (
 	"dsa/slidingwindow/fixedslidingwindow"
 	"dsa/tree"
 	"fmt"
+	"net/http"
+	"strings"
 )
 
 func main() {
@@ -164,4 +166,30 @@ func main() {
 
 	len := fixedslidingwindow.LongestSubStringWithoutRepeatingChar("abcabade")
 	fmt.Println("LongestSubStringWithoutRepeatingChar: ", len)
+
+	str = "DJFIDSkdsjfkj123213@kjdfij.dfjsdifsdaf.KFKFJ"
+	fmt.Println("Lower: ", strings.ToLower(str))
+
+	// go goroutine.GoRoutine("A")
+	// go goroutine.GoRoutine("B")
+	// go goroutine.GoRoutine("C")
+
+	// i := 0
+
+	// for {
+	// 	fmt.Println("Hello ", i)
+	// 	i++
+	// 	time.Sleep(2 * time.Second)
+
+	// }
+
+	// cuncurrency.RunConcurrently()
+	// cuncurrency.RunInParallel()
+	// cuncurrency.RunSequentially()
+
+	res := practice.NCRCombinators(10, 3)
+
+	fmt.Println("res: ", res)
+
+	http.ListenAndServe(":29901", nil)
 }
