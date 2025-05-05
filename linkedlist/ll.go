@@ -2,7 +2,7 @@ package linkedlist
 
 type Node struct {
 	Previous *Node
-	Data     interface{}
+	Data     any
 	Next     *Node
 }
 
@@ -11,7 +11,7 @@ type DoublyLinkedList struct {
 	Tail *Node
 }
 
-func (d *DoublyLinkedList) AddAtEnd(val interface{}) {
+func (d *DoublyLinkedList) AddAtEnd(val any) {
 	newNode := &Node{Data: val}
 
 	if d.Head == nil {

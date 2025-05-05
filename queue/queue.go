@@ -1,14 +1,14 @@
 package queue
 
 type Queue struct {
-	items []interface{}
+	items []any
 }
 
-func (q *Queue) Push(item interface{}) {
+func (q *Queue) Push(item any) {
 	q.items = append(q.items, item)
 }
 
-func (q *Queue) Pop() (interface{}, bool) {
+func (q *Queue) Pop() (any, bool) {
 
 	if len(q.items) == 0 {
 		return -1, false
@@ -23,7 +23,7 @@ func (q *Queue) IsEmpty() bool {
 	return len(q.items) == 0
 }
 
-func (q *Queue) Peek() interface{} {
+func (q *Queue) Peek() any {
 
 	if len(q.items) == 0 {
 		return -1

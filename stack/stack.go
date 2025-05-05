@@ -1,14 +1,14 @@
 package stack
 
 type Stack struct {
-	items []interface{}
+	items []any
 }
 
-func (s *Stack) Push(num interface{}) {
+func (s *Stack) Push(num any) {
 	s.items = append(s.items, num)
 }
 
-func (s *Stack) Pop() (interface{}, bool) {
+func (s *Stack) Pop() (any, bool) {
 
 	if len(s.items) == 0 {
 		return -1, false
@@ -24,7 +24,7 @@ func (s *Stack) IsEmpty() bool {
 	return len(s.items) == 0
 }
 
-func (s *Stack) Peek() interface{} {
+func (s *Stack) Peek() any {
 
 	if len(s.items) == 0 {
 		return -1
